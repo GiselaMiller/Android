@@ -7,19 +7,19 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class HolaMundo extends AppCompatActivity {
+public class DetalleProducto extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hola_mundo);
+        setContentView(R.layout.activity_detalle_producto);
 
         //Obtenemos una referencia a los controles de la interfaz
-        final Button producto = (Button)findViewById(R.id.verProducto);
+        final Button atras = (Button)findViewById(R.id.volver);
 //Implementamos el evento “click” del botón
-        producto.setOnClickListener(new View.OnClickListener() {
+        atras.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent =  new Intent(HolaMundo.this, DetalleProducto.class);
+                Intent intent =  new Intent(DetalleProducto.this, HolaMundo.class);
                 startActivity(intent);
             }
         });
